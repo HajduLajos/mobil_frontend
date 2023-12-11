@@ -14,6 +14,8 @@ import Retek from './Retek';
 import Mogyoro from './Mogyoro';
 import Felvitel from './felvitel';
 import Lenyilo from './Lenyilo';
+import NintendoTart from './NintendoTart';
+import KiiratNintendo from './KiiratNintendo';
 
 function HomeScreen({ navigation }) {
   return (
@@ -22,16 +24,13 @@ function HomeScreen({ navigation }) {
       style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
     >
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Button
-          onPress={() => navigation.navigate('Notifications')}
-          title="Go to notifications"
-        />
-
-
         <TouchableOpacity style={{ backgroundColor: "#06c995", width: 175, height: 45, padding: 8 }} onPress={() => navigation.navigate('Retek')}>
           <Text style={{ color: "black", textAlign: "center", fontSize: 18 }} >Pc alkatrészek</Text>
         </TouchableOpacity>
-
+        <Text></Text>
+        <TouchableOpacity style={{ backgroundColor: "#06c995", width: 200, height: 45, padding: 8 }} onPress={() => navigation.navigate('NintendoTart')}>
+          <Text style={{ color: "black", textAlign: "center", fontSize: 18 }} >Nintendo tartozékok</Text>
+        </TouchableOpacity>
 
 
       </View>
@@ -120,7 +119,8 @@ export default function App() {
         <Stack.Screen name="Root" component={Root} options={{ headerShown: false }} />
         <Stack.Screen name="Kiirat" component={Kiirat} />
         <Stack.Screen name="Retek" component={Retek} />
-
+        <Stack.Screen name="NintendoTart" component={NintendoTart}/>
+        <Stack.Screen name="KiiratNintendo" component={KiiratNintendo}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
