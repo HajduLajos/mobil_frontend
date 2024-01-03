@@ -14,12 +14,21 @@ import Retek from './Retek';
 import Mogyoro from './Mogyoro';
 import Felvitel from './felvitel';
 import Lenyilo from './Lenyilo';
+
 import NintendoTart from './NintendoTart';
 import KiiratNintendo from './KiiratNintendo';
 import PlaystationTart from './PlaystationTart';
 import kiiratPlaystation from './kiiratPlaystation';
+import XboxTart from './XboxTart';
+import KiiratXbox from './KiiratXbox';
+import Jatekok from './Jatekok';
+import PcJatekok from './PcJatekok';
+import KiiratPcJatekok from './KiiratPcJatekok';
+
 import KozosScreen from './KozosScreen';
 import KozosUjlap from './KozosUjlap';
+import Video from './Video';
+import Nevjegy from './Nevjegy';
 
 function HomeScreen({ navigation }) {
   return (
@@ -39,7 +48,10 @@ function HomeScreen({ navigation }) {
         <TouchableOpacity style={{ backgroundColor: "#06c995", width: 200, height: 45, padding: 8 }} onPress={() => navigation.navigate('PlaystationTart')}>
           <Text style={{ color: "black", textAlign: "center", fontSize: 18 }} >Playstation tartozékok</Text>
         </TouchableOpacity>
-
+        <Text></Text>
+        <TouchableOpacity style={{ backgroundColor: "#06c995", width: 200, height: 45, padding: 8 }} onPress={() => navigation.navigate('XboxTart')}>
+          <Text style={{ color: "black", textAlign: "center", fontSize: 18 }} >Xbox tartozékok</Text>
+        </TouchableOpacity>
       </View>
     </LinearGradient>
   );
@@ -56,6 +68,9 @@ function Root({ navigation }) {
       <Drawer.Screen name="Felvitel" component={Felvitel} ></Drawer.Screen>
       <Drawer.Screen name="Lenyilo" component={Lenyilo} ></Drawer.Screen>
       <Drawer.Screen name="Közös Screen" component={KozosScreen} ></Drawer.Screen>
+      <Drawer.Screen name="Video" component={Video} ></Drawer.Screen>
+      <Drawer.Screen name="Nevjegy" component={Nevjegy} ></Drawer.Screen>
+      <Drawer.Screen name="Jatekok" component={Jatekok} ></Drawer.Screen>
     </Drawer.Navigator>
   );
 }
@@ -129,7 +144,11 @@ export default function App() {
         <Stack.Screen name="KiiratNintendo" component={KiiratNintendo} />
         <Stack.Screen name="PlaystationTart" component={PlaystationTart} />
         <Stack.Screen name="KiiratPlaystation" component={kiiratPlaystation} />
+        <Stack.Screen name="XboxTart" component={XboxTart} />
+        <Stack.Screen name="KiiratXbox" component={KiiratXbox} />
         <Stack.Screen name="KozosUjlap" component={KozosUjlap} />
+        <Stack.Screen name="PcJatekok" component={PcJatekok} />
+        <Stack.Screen name="KiiratPcJatekok" component={KiiratPcJatekok} />
       </Stack.Navigator>
     </NavigationContainer>
   );
