@@ -15,6 +15,7 @@ import Mogyoro from './Mogyoro';
 import Felvitel from './felvitel';
 import Lenyilo from './Lenyilo';
 
+
 import NintendoTart from './NintendoTart';
 import KiiratNintendo from './KiiratNintendo';
 import PlaystationTart from './PlaystationTart';
@@ -24,11 +25,18 @@ import KiiratXbox from './KiiratXbox';
 import Jatekok from './Jatekok';
 import PcJatekok from './PcJatekok';
 import KiiratPcJatekok from './KiiratPcJatekok';
+import NintendoJatekok from './NintendoJatekok';
+import KiiratNintendoJatekok from './KiiratNintendoJatekok';
+import PlaystationJatekok from './PlaystationJatekok';
+import KiiratPlaystationJatekok from './KiiratPlaystationJatekok';
+import XboxJatekok from './XboxJatekok';
+import KiiratXboxJatekok from './KiiratXboxJatekok';
+import Nevjegy from './Nevjegy';
+
+
 
 import KozosScreen from './KozosScreen';
 import KozosUjlap from './KozosUjlap';
-import Video from './Video';
-import Nevjegy from './Nevjegy';
 
 function HomeScreen({ navigation }) {
   return (
@@ -68,9 +76,8 @@ function Root({ navigation }) {
       <Drawer.Screen name="Felvitel" component={Felvitel} ></Drawer.Screen>
       <Drawer.Screen name="Lenyilo" component={Lenyilo} ></Drawer.Screen>
       <Drawer.Screen name="Közös Screen" component={KozosScreen} ></Drawer.Screen>
-      <Drawer.Screen name="Video" component={Video} ></Drawer.Screen>
-      <Drawer.Screen name="Nevjegy" component={Nevjegy} ></Drawer.Screen>
       <Drawer.Screen name="Jatekok" component={Jatekok} ></Drawer.Screen>
+      <Drawer.Screen name="Nevjegy" component={Nevjegy} ></Drawer.Screen>
     </Drawer.Navigator>
   );
 }
@@ -80,39 +87,6 @@ function Root({ navigation }) {
 //<Drawer.Screen name="Pc alkatrészek" component={Proba2_megjelenites} ></Drawer.Screen>
 //<Drawer.Screen name="Pc alkatrészek2" component={Retek_megjelenites} ></Drawer.Screen>
 //<Drawer.Screen name="Mogyoró" component={Mogyoro} ></Drawer.Screen>
-
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
-    </View>
-  );
-}
-
-function Proba_megjelenites({ navigation }) {
-  return (
-    <Proba />
-  );
-}
-
-function Retek_megjelenites({ navigation }) {
-  return (
-    <Retek />
-  );
-}
-
-
-function Proba2_megjelenites({ navigation }) {
-  return (
-    <Proba2 />
-  );
-}
-
-function Proba3_megjelenites({ navigation }) {
-  return (
-    <Proba />
-  );
-}
 
 
 
@@ -149,6 +123,13 @@ export default function App() {
         <Stack.Screen name="KozosUjlap" component={KozosUjlap} />
         <Stack.Screen name="PcJatekok" component={PcJatekok} />
         <Stack.Screen name="KiiratPcJatekok" component={KiiratPcJatekok} />
+        <Stack.Screen name="NintendoJatekok" component={NintendoJatekok} />
+        <Stack.Screen name="KiiratNintendoJatekok" component={KiiratNintendoJatekok} />
+        <Stack.Screen name="PlaystationJatekok" component={PlaystationJatekok} />
+        <Stack.Screen name="KiiratPlaystationJatekok" component={KiiratPlaystationJatekok} />
+        <Stack.Screen name="XboxJatekok" component={XboxJatekok} />
+        <Stack.Screen name="KiiratXboxJatekok" component={KiiratXboxJatekok} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

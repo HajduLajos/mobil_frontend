@@ -6,12 +6,13 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { WebView } from 'react-native-webview';
 
 
-const KiiratPcJatekok = ({route,navigation}) => {
+const KiiratPlaystationJatekok = ({route,navigation}) => {
 const {nev} = route.params;
 const {kep} = route.params;
 const {ev} = route.params;
 const {ar} = route.params;
 const {trailer} = route.params;
+
 
   return (
     <LinearGradient
@@ -30,7 +31,7 @@ const {trailer} = route.params;
       <Text>Termék ára: {ar} Ft</Text>
 
       
-      <TouchableOpacity style={{ backgroundColor: "#06c995", width: 175, height: 45, padding: 8 }} onPress={() => navigation.navigate('PcJatekok')}>
+      <TouchableOpacity style={{ backgroundColor: "#06c995", width: 175, height: 45, padding: 8 }} onPress={() => navigation.navigate('PlaystationJatekok')}>
           <Text style={{ color: "black", textAlign: "center", fontSize: 18 }} >Vissza</Text>
       </TouchableOpacity>
     </View>
@@ -48,4 +49,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default KiiratPcJatekok;
+export default KiiratPlaystationJatekok;
