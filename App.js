@@ -10,10 +10,9 @@ import Proba from './Proba';
 import Proba2 from './Proba2';
 import Proba3 from './Proba3';
 import Kiirat from './Kiirat';
-import Retek from './Retek';
+import Alkatreszek from './Retek';
 import Mogyoro from './Mogyoro';
 import Felvitel from './felvitel';
-import Lenyilo from './Lenyilo';
 
 
 import NintendoTart from './NintendoTart';
@@ -31,7 +30,9 @@ import PlaystationJatekok from './PlaystationJatekok';
 import KiiratPlaystationJatekok from './KiiratPlaystationJatekok';
 import XboxJatekok from './XboxJatekok';
 import KiiratXboxJatekok from './KiiratXboxJatekok';
+import Komment from './Komment'
 import Nevjegy from './Nevjegy';
+import Hozzaszolas from './Hozzaszolas';
 
 
 
@@ -45,7 +46,7 @@ function HomeScreen({ navigation }) {
       style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
     >
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <TouchableOpacity style={{ backgroundColor: "#06c995", width: 175, height: 45, padding: 8 }} onPress={() => navigation.navigate('Retek')}>
+        <TouchableOpacity style={{ backgroundColor: "#06c995", width: 175, height: 45, padding: 8 }} onPress={() => navigation.navigate('Alkatreszek')}>
           <Text style={{ color: "black", textAlign: "center", fontSize: 18 }} >Pc alkatrészek</Text>
         </TouchableOpacity>
         <Text></Text>
@@ -74,9 +75,8 @@ function Root({ navigation }) {
     <Drawer.Navigator initialRouteName="Home">
       <Drawer.Screen name="Home" component={HomeScreen} ></Drawer.Screen>
       <Drawer.Screen name="Felvitel" component={Felvitel} ></Drawer.Screen>
-      <Drawer.Screen name="Lenyilo" component={Lenyilo} ></Drawer.Screen>
-      <Drawer.Screen name="Közös Screen" component={KozosScreen} ></Drawer.Screen>
       <Drawer.Screen name="Jatekok" component={Jatekok} ></Drawer.Screen>
+      <Drawer.Screen name="Komment" component={Komment} ></Drawer.Screen>
       <Drawer.Screen name="Nevjegy" component={Nevjegy} ></Drawer.Screen>
     </Drawer.Navigator>
   );
@@ -113,7 +113,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Root">
         <Stack.Screen name="Root" component={Root} options={{ headerShown: false }} />
         <Stack.Screen name="Kiirat" component={Kiirat} />
-        <Stack.Screen name="Retek" component={Retek} />
+        <Stack.Screen name="Alkatreszek" component={Alkatreszek} />
         <Stack.Screen name="NintendoTart" component={NintendoTart} />
         <Stack.Screen name="KiiratNintendo" component={KiiratNintendo} />
         <Stack.Screen name="PlaystationTart" component={PlaystationTart} />
@@ -129,6 +129,7 @@ export default function App() {
         <Stack.Screen name="KiiratPlaystationJatekok" component={KiiratPlaystationJatekok} />
         <Stack.Screen name="XboxJatekok" component={XboxJatekok} />
         <Stack.Screen name="KiiratXboxJatekok" component={KiiratXboxJatekok} />
+        <Stack.Screen name="Hozzaszolas" component={Hozzaszolas} />
 
       </Stack.Navigator>
     </NavigationContainer>
